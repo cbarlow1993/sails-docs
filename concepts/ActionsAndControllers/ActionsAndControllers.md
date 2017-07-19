@@ -48,7 +48,7 @@ module.exports = function welcomeUser (req, res) {
       // Handle unknown errors.
       if (err) {return res.serverError(err);}
       // If no user was found, redirect to signup.
-      if (!user) {return res.redirect('/signup');
+      if (!user) {return res.redirect('/signup')};
       // Display the welcome view, setting the view variable
       // named "name" to the value of the user's name.
       return res.view('welcome', {name: user.name});
